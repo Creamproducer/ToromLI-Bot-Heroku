@@ -1,8 +1,8 @@
-token: "lip_A6yBMI8eD2LefvkxCXZt"         # Lichess OAuth2 Token.
+token: "lip_1MO5PMwk1OygjVgYZ1dO"         # Lichess OAuth2 Token.
 
 engine:                                   # Engine settings.
   dir: "./"               # Directory containing the engine.
-  name: "sf"        # Binary name of the engine to use.
+  name: "chess-engine"        # Binary name of the engine to use.
   ponder: true                            # Think on opponent's time.
   polyglot:
     enabled: true                         # Activate polyglot book.
