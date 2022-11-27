@@ -8,7 +8,7 @@ engine:                                   # Engine settings.
     enabled: true                         # Activate polyglot book.
     books:
       white: "lichess-book"                      # Name of the book to use as white.
-      black: "Titans"                         # Name of the book to use as black.
+      black: "alphavssf"                         # Name of the book to use as black.
       standard: null                 # Name of the book to use if there is no specific book for white, black or chess960.
       chess960: null                      # Name of the book to use for Chess960.
     selection: "best_move"                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
@@ -31,7 +31,7 @@ engine:                                   # Engine settings.
       min_time: 20                       # Time the bot must have at least to use the online move.
       timeout: 5                          # Time the server has to respond.
   offer_draw:
-    enabled: false                        # Activate whether the bot should offer draw.
+    enabled: true                        # Activate whether the bot should offer draw.
     score: 10                             # If the absolute value of the score is less than or equal to this value, the bot offers/accepts draw (in cp)
     consecutive_moves: 10                 # How many moves in a row the absolute value of the score has to be below the draw value
     min_game_length: 30                   # Earliest move in which draw is offered.
@@ -40,15 +40,15 @@ engine:                                   # Engine settings.
     score: -1000                          # If the score is less than or equal to this value, the bot resigns (in cp).
     consecutive_moves: 5                  # How many moves in a row the score has to be below the resign value.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 100                    # Increase if your bot flags games too often.
+    Move Overhead: 40                    # Increase if your bot flags games too often.
     Threads: 3                            # Max CPU threads the engine can use.
     Hash: 128                             # Max memory (in megabytes) the engine can allocate.
-    MultiPV: 47
+    MultiPV: 113
     Skill Level: 20
     UCI_Elo : 2850
-    Slow Mover: 29
+    Slow Mover: 80
  
-move_overhead_multiplier: 3.14             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+move_overhead_multiplier: 5.3             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
 challenge:                                # Incoming challenges. (Commenting allowed)
   concurrency: 1                          # Number of games to play simultaneously.
@@ -90,4 +90,4 @@ matchmaking:
 
 books: 
     lichess-book: "./engines/lichess-book.bin"  # Name of the opening book (to be used above in the polyglot section) and path to the polyglot opening book.  
-    Titans: "./engines/Titans.bin"
+    alphavssf: "./engines/alphavssf.bin"
