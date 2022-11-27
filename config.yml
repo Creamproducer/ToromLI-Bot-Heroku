@@ -1,4 +1,4 @@
-token: "lip_1MO5PMwk1OygjVgYZ1dO"         # Lichess OAuth2 Token.
+token: "lip_wkOUZOLyuxBfqsX4yUAe"         # Lichess OAuth2 Token.
 
 engine:                                   # Engine settings.
   dir: "./"               # Directory containing the engine.
@@ -40,15 +40,15 @@ engine:                                   # Engine settings.
     score: -1000                          # If the score is less than or equal to this value, the bot resigns (in cp).
     consecutive_moves: 5                  # How many moves in a row the score has to be below the resign value.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
-    Move Overhead: 50                    # Increase if your bot flags games too often.
-    Threads: 5                            # Max CPU threads the engine can use.
-    Hash: 256                             # Max memory (in megabytes) the engine can allocate.
-    MultiPV: 10
+    Move Overhead: 100                    # Increase if your bot flags games too often.
+    Threads: 3                            # Max CPU threads the engine can use.
+    Hash: 128                             # Max memory (in megabytes) the engine can allocate.
+    MultiPV: 38
     Skill Level: 20
     UCI_Elo : 2850
-    Slow Mover: 60
+    Slow Mover: 40
  
-move_overhead_multiplier: 5.1             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+move_overhead_multiplier: 2.1             # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
 
 challenge:                                # Incoming challenges. (Commenting allowed)
   concurrency: 1                          # Number of games to play simultaneously.
