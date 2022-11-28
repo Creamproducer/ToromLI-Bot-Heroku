@@ -10,7 +10,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo curl apt-utils libqt5gui5 python3-psutil wget python3 python3-pip p7zip-full git build-essential
 
-RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/d09653df0d1bfec0af05ab2e8975e0d8e5cccba8/linux64modern/stockfish_22103015_x64_modern.zip" -O chess-engine.zip
+RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/d6b6360ff5dcdffa141f50d0a81d0be7c6324c71/linux64modern/stockfish_22101609_x64_modern.zip" -O chess-engine.zip
 RUN 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 COPY requirements.txt .
